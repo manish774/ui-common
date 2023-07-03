@@ -1,4 +1,4 @@
-name: Lint Code
+name: Lint Test
 
 on:
   push:
@@ -9,11 +9,11 @@ on:
       - main
 
 jobs:
-  lint:
+  lint-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Setup Node.js
@@ -24,10 +24,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run ESLint
+      - name: Run linter
         run: npm run lint
-        # Replace `npm run lint` with the appropriate command to run ESLint
-
-      - name: Run Prettier
-        run: npm run prettier
-        # Replace `npm run prettier` with the appropriate command to run Prettier
