@@ -2,7 +2,7 @@
   "name": "contextts",
   "version": "0.1.0",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@manish774"
+    "registry": "https://npm.pkg.github.com/@manish774"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format":""
+    "format": ""
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.44.0",
     "tailwindcss": "^3.3.2"
   }
 }
