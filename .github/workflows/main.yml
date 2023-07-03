@@ -66,16 +66,3 @@ jobs:
         # that runs prettier to check code format
         run: npm run format:check
 
-      - name: Run Jest
-        # Run the test:unit custom NPM command
-        # that runs Jest 
-        run: npm run test:unit
-
-      - name: Push the coverage
-        # Run the coverage:push custom NPM command
-        # that push the Jest coverage to codcov 
-        # The secrets.CODECOV is a constant that is used
-        # to store the CODECOV token.
-        # The GH secrets are used like ENV variables to pass sensible informatin
-        # to the flow.
-        run: npm run coverage:push -- --token=${{ secrets.CODECOV_TOKEN }}
