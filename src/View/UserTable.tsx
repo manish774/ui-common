@@ -18,7 +18,7 @@ const UserTable = () => {
   const [isLoading, setLoading] = useState<boolean>(true);
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [openModal, setOpenModal] = useState<ModalState>("CLOSE_MODAL");
-  
+
   const openNewModal = () => {
     setOpenModal("OPEN_MODAL");
   };
@@ -63,14 +63,14 @@ const UserTable = () => {
 
   useEffect(() => {}, [selectedUsers]);
   const searchInTable = (e: any) => {
-    const {records , text} = e;
-    const filteredRecords = records.filter((rec:any)=>rec?.name?.includes(e));
+    const { records, text } = e;
+    const filteredRecords = records.filter((rec: any) =>
+      rec?.name?.includes(e)
+    );
     const rec = Promise.resolve({
       records: filteredRecords || [],
       totalCount: filteredRecords?.length || 0,
     });
-    
-
   };
   const config = useMemo(() => {
     return {
